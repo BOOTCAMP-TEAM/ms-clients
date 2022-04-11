@@ -1,6 +1,6 @@
-package com.bootcamp.msclients.client;
+package com.bootcamp.msclients.agency;
 
-import com.bootcamp.msclients.client.model.Client;
+import com.bootcamp.msclients.agency.model.Agency;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/client")
-@Tag(name = "Client", description = "Manage clients")
+@RequestMapping("/agency")
+@Tag(name = "Agency", description = "Manage agencies")
 @RequiredArgsConstructor
-public class ClientController {
+public class AgencyController {
 
-    public final ClientService service;
+    public final AgencyService service;
 
     @GetMapping
-    public Iterable<Client> getAll() {
+    public Iterable<Agency> getAll() {
         return service.getAll();
     }
 
     @PostMapping
-    public Client create(@RequestBody Client o) {
+    public Agency create(@RequestBody Agency o) {
         return service.create(o);
     }
 

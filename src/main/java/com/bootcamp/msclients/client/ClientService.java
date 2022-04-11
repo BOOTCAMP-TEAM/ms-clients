@@ -5,6 +5,6 @@ import com.bootcamp.msclients.client.model.Client;
 public interface ClientService {
 
     public Iterable<Client> getAll();
-    public Client create(Client client);
+    public Client create(Client o);
 
 }
